@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Google Map Game</title>
+</head>
+<body onload="javascript:webSocket()">
+<div class="header">Map Marker Game - Find capital city of each country</div>
+<h6>For best experience use fullscreen mode</h6>
+<div id="map"></div>
+<div class="chat">
+  <h2>Chat</h2>
+  <div class="messageWindow"></div>
+      <div class="message">
+        <input type="text" id="inputMsg" placeholder="Message">
+        <button type="submit" onclick="doSend(document.querySelector('#inputMsg').value)">Send message</button>
+      </div>
+</div>
+<div class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="closeBtn">&times;</span>
+        <h2>Wybierz avatar</h2>
+      </div>
+      <div class="modal-body">
+        <div class="choice">
+          <div class="avatar">
+            <img src="https://img.icons8.com/ios/48/000000/hummerstein-filled.png" id="av1">
+          </div>
+          <div class="avatar">
+              <img src="https://img.icons8.com/ios/48/000000/ninja-turtle-filled.png" id="av2">
+          </div>
+          <div class="avatar">
+              <img src="https://img.icons8.com/color/48/000000/the-flash-head.png" id="av3">
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<span class="metadata-marker" style="display: none;" data-region_tag="html-body"></span>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARkS-dsh-7IirtcQg3oSZEHudV6Uw9Iic&callback=initMap"></script>
+<script src="script.js"></script>
+</body>
+</html>
